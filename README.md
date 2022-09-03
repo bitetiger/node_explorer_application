@@ -7,7 +7,7 @@
 ## Structure
 - Frontend : python vue, github action CI/CD을 통한 S3 정적 웹페이지 구성
 - Backend : python flask 활용, github action CI/CD를 통한 도커 컨테이너 환경(ECR - ECS)
-- Database : Mongodb(local)
+- Database : Mongodb
 - Terraform 활용한 인프라 리소스 관리
 
 ## Database
