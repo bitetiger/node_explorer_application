@@ -11,6 +11,9 @@
 - Terraform 활용한 인프라 리소스 관리
 
 ## Database
+- MongoDB
+- docker 컨테이너 활용
+- port : 27017
 ```
 docker run \
     --name mongodb \
