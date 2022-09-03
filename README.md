@@ -12,8 +12,6 @@
 
 ## Database
 - MongoDB
-- docker 컨테이너 활용
-- port : 27017
 ```
 docker run \
     --name mongodb \
