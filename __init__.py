@@ -9,9 +9,20 @@ CORS(app)
 def home():
     return render_template('index.html')
 
-@app.route("/hello")
-def hello_flask():
-    return "<h1>Hello Flash!</h1>"
+@app.route("/cardano")
+def cardano():
+    return render_template('cardano.html')
+
+
+@app.route("/solana")
+def cardano():
+    return render_template('solana.html')
+
+
+@app.route("/avalanche")
+def cardano():
+    return render_template('avalanche.html')
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
