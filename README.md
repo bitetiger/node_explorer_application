@@ -24,3 +24,7 @@ docker run \
     mongo
 ```
 
+## Environment Variable
+- username (mongodb username)
+- password (mongodb passwd)
+- ip_address (mongodb host)
