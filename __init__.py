@@ -1,15 +1,7 @@
 from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
-import pymongo
 import os
 from dotenv import load_dotenv
-
-ip_address=os.environ.get("ip_address")
-connection = pymongo.MongoClient()
-connection = pymongo.MongoClient('mongodb://%s' % (ip_address))
-# connection = pymongo.MongoClient('mongodb://%s:%s@%s' % (username, password, ip_address))
-blog_session_db = connection.blog_session_db
-blog_ab = blog_session_db.blog_ab
 
 app = Flask(__name__)
 CORS(app)
