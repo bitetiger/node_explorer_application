@@ -7,7 +7,7 @@
 ## Structure
 - python flask, vue 
 - github action 도커 컨테이너 환경 CI/CD 구축(AWS ECS, ECR)
-- Mongodb
+- MongoDB
 - Terraform 활용한 인프라 리소스 관리
 
 ## Database
