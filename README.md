@@ -5,9 +5,9 @@
 - Layer 별 node&validator 수 및 현재 스테이킹 수익률, 예상 수익률 확인가능
 
 ## Structure
-- Frontend : python vue, github action CI/CD을 통한 S3 정적 웹페이지 구성
-- Backend : python flask 활용, github action CI/CD를 통한 도커 컨테이너 환경(ECR - ECS)
-- Database : Mongodb
+- python flask, vue 
+- github action 도커 컨테이너 환경 CI/CD 구축(AWS ECS, ECR)
+- Mongodb
 - Terraform 활용한 인프라 리소스 관리
 
 ## Database
