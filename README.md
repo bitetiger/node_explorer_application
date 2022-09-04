@@ -11,7 +11,6 @@
 - Terraform 활용한 인프라 리소스 관리
 
 ## Database
-- MongoDB
 - DB name : explorer_session_db
 - collection name : explorer_collection
 
