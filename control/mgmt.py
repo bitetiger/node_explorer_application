@@ -6,13 +6,14 @@ class ExplorerSession():
     session_count = 0
 
     @staticmethod
-    def save_session_info(session_ip):
+    def save_session_info(session_ip, web_page):
         now = datetime.now()
         now_time = now.strftime("%d/%m/%Y %H:%M:%S")  # https://strftime.org/
         
         mongo_db = conn_mongodb()
         mongo_db.insert_one({
             'session_ip': session_ip,
+            'web_page' : web_page,
             'access_time': now_time
         })
 

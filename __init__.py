@@ -10,7 +10,7 @@ app.secret_key = 'secretkey'
 
 @app.route('/')
 def home():
-    control.mgmt.ExplorerSession.save_session_info(session['ip'])
+    control.mgmt.ExplorerSession.save_session_info(session['ip'], 'home')
     return render_template('index.html')
 
 @app.before_request
