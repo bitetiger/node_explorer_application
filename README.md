@@ -12,6 +12,12 @@
 
 ## Database
 - MongoDB
+- DB name : explorer_session_db
+- collection name : explorer_collection
+
+### Data
+- session_ip : 사용자 ip 주소
+- access_time : 접속 시간
 ```
 docker run \
     --name mongodb \
