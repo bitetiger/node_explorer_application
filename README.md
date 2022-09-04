@@ -16,6 +16,7 @@
 - collection name : explorer_collection
 
 ### Data
+![image](https://user-images.githubusercontent.com/89952061/188305139-741ca731-22f2-46d5-ae6c-3fb71e7ac178.png)
 - session_ip : 사용자 ip 주소
 - access_time : 접속 시간
 ```
