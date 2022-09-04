@@ -6,18 +6,17 @@ class ExplorerSession():
     session_count = 0
 
     @staticmethod
-    def save_session_info(session_ip, webpage_name):
+    def save_session_info(session_ip):
         now = datetime.now()
-        now_time = now.strftime("%d/%m/%y %H:%M:%S") #https://strftime.org/
+        now_time = now.strftime("%d/%m/%Y %H:%M:%S")  # https://strftime.org/
         
         mongo_db = conn_mongodb()
         mongo_db.insert_one({
-            'session_ip' : session_ip,
-            'page' : webpage_name,
-            'access_time' : now_time
+            'session_ip': session_ip,
+            'access_time': now_time
         })
 
-    @staticmethod
+    @staticmethod # AB_test를 위한 static 메소드, 페이지 호출
     def get_explorer_page(page_id=None):
         if page_id == None:
             if ExplorerSession.session_count == 0:

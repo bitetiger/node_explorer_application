@@ -6,34 +6,17 @@ import control.mgmt
 
 app = Flask(__name__)
 CORS(app)
-
+app.secret_key = 'secretkey'
 
 @app.route('/')
 def home():
-    webpage_name = control.mgmt.ExplorerSession.get_explorer_page() 
-    control.mgmt.ExplorerSession.save_session_info(session['client_ip'], 'anonymous', webpage_name)
-    # print(control.mgmt.ExplorerSession.get_explorer_page())
-    return render_template('explorer_A.html')
-
-@app.route("/cardano")
-def cardano():
-    return render_template('cardano.html')
-
-
-@app.route("/solana")
-def solana():
-    return render_template('solana.html')
-
-
-@app.route("/avalanche")
-def avalanche():
-    return render_template('avalanche.html')
+    control.mgmt.ExplorerSession.save_session_info(session['ip'])
+    return render_template('index.html')
 
 @app.before_request
 def app_before_request():
-    if 'client_id' not in session:
-        session['client_id'] = request.environ.get('HTTP_X_REAL_IP', request.remote_addr)
-
+         session['ip'] = request.environ.get('HTTP_X_REAL_IP', request.remote_addr)
+         print(session['ip'], '이게 아이피다!!')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
